@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS order_details;
+DROP TABLE IF EXISTS users;
 
 -- カテゴリーテーブル
 CREATE TABLE categories
@@ -24,10 +25,13 @@ CREATE TABLE items
 CREATE TABLE customers
 (
    id SERIAL PRIMARY KEY,
+   username varchar(256),
+   password varchar(256),
+   email varchar(256) UNIQUE,
    name TEXT,
+   birthday DATE,
    address TEXT,
-   tel TEXT,
-   email TEXT
+   tel TEXT
 );
 -- 注文テーブル
 CREATE TABLE orders
@@ -59,4 +63,13 @@ CREATE VIEW v_order_details AS
    FROM order_details d
    JOIN items i
       ON d.item_id = i.id
+);
+
+-- ユーザーテーブル
+CREATE TABLE users
+(
+   id SERIAL PRIMARY KEY,
+   name TEXT,
+   password TEXT,
+   email TEXT
 );

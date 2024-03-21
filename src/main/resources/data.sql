@@ -14,6 +14,10 @@ INSERT INTO items(category_id, name, price) VALUES(3, 'パズルゲーム', 780)
 INSERT INTO items(category_id, name, price) VALUES(3, 'Invader Fighter', 3400);
 INSERT INTO items(category_id, name, price) VALUES(3, 'Play the BascketBall', 2200);
 
+-- 新規登録テストデータ
+INSERT INTO users(name, password, email) VALUES('たろう', '12345678', 'tanaka@aaa.com');
+INSERT INTO users(name, password, email) VALUES('いちろう', '87654321', 'suzuki@aaa.com');
+
 -- 注文で発生するテストデータの追加
 INSERT INTO customers(name, address, tel, email) VALUES('田中太郎', '東京', '090-1111-1111', 'tanaka@aaa.com');
 INSERT INTO orders(customer_id, ordered_on, total_price) VALUES(1, '2020-04-10', 5980);

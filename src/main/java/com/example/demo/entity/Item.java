@@ -15,12 +15,12 @@ public class Item {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id; // 商品ID
 
-	@Column(name = "category_id")
+	@Column(name = "categoryId")
 	private Integer categoryId; // カテゴリーID
 
 	private String name; // 商品名
 
-	private Integer price; // 価格
+	private Integer price; // 価格	
 
 	@Transient // 永続化対象外
 	private Integer quantity; // 数量

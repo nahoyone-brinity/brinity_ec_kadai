@@ -14,14 +14,17 @@
 			<th>住所</th>
 			<th>電話番号</th>
 			<th>メールアドレス</th>
+			<th>パスワード</th>
 			<th></th>
 		</tr>
 		<tr th:each="customer:${customers}">
 			<td th:text="${customer.id}"></td>
+			<td th:text="${customer.username}"></td>
 			<td th:text="${customer.name}"></td>
 			<td th:text="${customer.address}"></td>
 			<td th:text="${customer.tel}"></td>
 			<td th:text="${customer.email}"></td>
+			<td th:text="${customer.password}"></td>
 			<td>
 				<a th:href="'/admin/customers/' + ${customer.id} + '/orders'">注文情報</a>
 			</td>

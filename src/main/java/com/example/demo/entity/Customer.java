@@ -12,13 +12,13 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id; // 顧客ID
-
+	
 	private String name; // 名前
-
+	
 	private String address; // 住所
-
+	
 	private String tel; // 電話番号
-
+	
 	private String email; // メールアドレス
 
 	// コストラクタ
@@ -52,4 +52,5 @@ public class Customer {
 	public String getEmail() {
 		return email;
 	}
+
 }

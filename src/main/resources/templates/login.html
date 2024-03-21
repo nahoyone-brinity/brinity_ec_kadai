@@ -11,8 +11,18 @@
 	</header>
 	<main>
 		<form action="/login" method="post">
-			<input type="text" name="name" placeholder="名前">
-			<button>ログイン</button>
+			<input type="text" name="name" placeholder="名前"><br>
+			<input type="text" name="password" placeholder="パスワード"><br>
+			<button>ログイン</button><br>
+			<br> <span th:text="${message}" style="color: red"></span>
+		</form>
+		<hr>
+		<br>
+		<form action="/login" method="post">
+			<input type="text" name="create_name" placeholder="名前"><br>
+			<input type="text" name="create_password" placeholder="パスワード"><br>
+			<input type="text" name="create_email" placeholder="メールアドレス"><br>
+			<button>新規登録</button>
 			<br> <span th:text="${message}" style="color: red"></span>
 		</form>
 	</main>
